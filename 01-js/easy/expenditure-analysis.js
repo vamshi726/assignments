@@ -14,7 +14,15 @@
 */
 
 function calculateTotalSpentByCategory(transactions) {
+  // let listOfObjs = []
+  // let lengthOfTrans = transactions.length
+  // for (let i=0;i<lengthOfTrans;i++){
+  //   listOfObjs.push()
+  // }
+
   return [];
 }
+
+
 
 module.exports = calculateTotalSpentByCategory;

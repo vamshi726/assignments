@@ -16,6 +16,51 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor(result){
+    this.result = 0
+  }
+  add(number){
+    this.result += number
+    
+  }
+  subtract(number){
+    this.result -= number
+  }
 
+  multiply(number){
+    this.result *= number
+    
+  }
+  divide(number){
+    if(number === 0){
+      throw new Error("cannot divide by zero")
+    }
+    this.result /= number
+
+  }
+
+  clear(){
+    this.result = 0
+  }
+  
+  getResult(){
+    return this.result;
+  }
+  // - calculate: takes a string expression which can take multi-arithmetic operations and give its result
+  //     example input: `10 +   2 *    (   6 - (4 + 1) / 2) + 7`
+  
+  calculate(str){
+    this.result= eval(str)
+    if(!isFinite(this.result)){
+      throw new Error("error thrown not a number")
+    }
+ 
+  }
+
+}
+
+
+
+ 
 module.exports = Calculator;
